@@ -7,9 +7,12 @@ gsettings set org.gnome.desktop.screensaver lock-enabled false
 gsettings set org.gnome.desktop.session idle-delay 0
 
 # Run installers
+initial_dir=$(pwd)
 install_dir="./install"
 for script in `ls "$install_dir" | sort -t- -k1,1n -k2,2`; do
-	source "$install_dir/$script";
+	pushd "$initial_dir" > /dev/null
+	source "$install_dir/$script"
+	popd > /dev/null
 done
 
 # Upgrade everything that might ask for a reboot last
