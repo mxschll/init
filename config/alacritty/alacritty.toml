@@ -13,11 +13,16 @@ bold = { family = "CaskaydiaMono Nerd Font", style = "Bold" }
 italic = { family = "CaskaydiaMono Nerd Font", style = "Italic" }
 
 [window]
-decorations = "buttonless"
-dynamic_padding = false
+decorations = "none"
+dynamic_padding = true
 opacity = 1
 startup_mode = "Windowed"
 
 [window.padding]
-x = 10
-y = 10
+x = 5
+y = 5
+
+[keyboard]
+bindings = [
+    { key = "F11", action = "ToggleFullscreen" }
+]
