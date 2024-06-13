@@ -8,3 +8,8 @@ sudo apt update && sudo apt install ulauncher
 
 # Config
 mkdir -p ~/.config/autostart/
+
+cp ~/.local/share/init/config/ulauncher/ulauncher.desktop ~/.config/autostart/ulauncher.desktop
+gtk-launch ulauncher.desktop >/dev/null 2>&1
+sleep 2
+cp ~/.local/share/init/config/ulauncher/ulauncher.json ~/.config/ulauncher/settings.json
