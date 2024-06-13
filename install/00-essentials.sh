@@ -1,4 +1,4 @@
-sudo apt install -y git 
+sudo apt install -y git ripgrep wget
 sudo apt install -y ripgrep
 
 # Build prerequisites (eg. for building Neovim)
