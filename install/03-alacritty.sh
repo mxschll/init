@@ -25,5 +25,9 @@ mkdir -p ${ZDOTDIR:-~}/.zsh_functions
 echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> ${ZDOTDIR:-~}/.zshrc
 cp extra/completions/_alacritty ${ZDOTDIR:-~}/.zsh_functions/_alacritty
 
+# Config
+cp -r ~/.local/share/init/config/alacritty ~/.config
+
+# Cleanup
 cd ~
 rm -rf ~/Downloads/alacritty
