@@ -1,0 +1,6 @@
+
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
+
+configuration {               
+    font: "TX-02 12";
+}
