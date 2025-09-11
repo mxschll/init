@@ -1,17 +1,22 @@
-sudo apt-get install -y zsh
+#!/bin/bash
+
+# Install zsh on Arch Linux
+sudo pacman -Sy --noconfirm zsh curl
 
 # Make zsh the default shell
-echo "Change default shell to zsh"
-chsh -s $(which zsh)
+echo "Changing default shell to zsh..."
+chsh -s "$(command -v zsh)"
 
 # Install Oh My Zsh
-if [ ! -d ~/.oh-my-zsh ]; then
-	curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    echo "Installing Oh My Zsh..."
+    curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
 fi
 
-# Config
-[ -f ~/.zshrc ] && cp ~/.zshrc ~/.zshrc.bak
-# Enable Oh My Zsh tmux plugin
-sed -i "s/plugins=(git)/plugins=(git tmux)/" ~/.zshrc
-# cp ~/.local/share/init/config/zsh/.zshrc ~/.zshrc
+# Backup and config
+if [ -f "$HOME/.zshrc" ]; then
+    cp "$HOME/.zshrc" "$HOME/.zshrc.bak"
+fi
 
+# Enable Oh My Zsh tmux plugin
+# sed -i 's/plugins=(git)/plugins=(git tmux)/' "$HOME/.zshrc"
