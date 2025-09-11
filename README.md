@@ -1,7 +1,5 @@
 # Init
 
-Heavily inspired by [Omakub](https://github.com/basecamp/omakub) but for Debian.
-
 ## Installation
 
 ```bash
