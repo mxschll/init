@@ -1,1 +1,1 @@
-sudo apt install -y okular
+sudo pacman -S --noconfirm okular
